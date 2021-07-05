@@ -12,7 +12,8 @@ A light sensor can be used to dim the LED's at night.
 The ESP can be programmed with OTA an debugging is possible with UDP.
 
 Infos on NTP with ESP8266: <http://weigu.lu/microcontroller/tips_tricks/esp_NTP_tips_tricks/index.html>
-Infos on logic-level-shifter6: <http://weigu.lu/microcontroller/tips_tricks/level_shifter_tts/index.html>
+
+Infos on logic-level-shifter: <http://weigu.lu/microcontroller/tips_tricks/level_shifter_tts/index.html>
 
 
 
