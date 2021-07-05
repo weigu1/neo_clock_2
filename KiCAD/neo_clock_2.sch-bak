@@ -1,0 +1,412 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L neopixel-rescue:ESP8266_LOLIN_D1_mini-weigu W1
+U 1 1 5D73B72C
+P 5250 2300
+F 0 "W1" H 5393 3087 60  0000 C CNN
+F 1 "ESP8266_LOLIN_D1_mini" H 5393 2981 60  0000 C CNN
+F 2 "" H 5250 2300 60  0001 C CNN
+F 3 "" H 5250 2300 60  0001 C CNN
+	1    5250 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L neopixel-rescue:C+-weigu C1
+U 1 1 5D73B8DD
+P 8350 1850
+F 0 "C1" H 8478 1896 50  0000 L CNN
+F 1 "1000µF" H 8478 1805 50  0000 L CNN
+F 2 "" H 8350 1820 60  0000 C CNN
+F 3 "" H 8350 1820 60  0000 C CNN
+	1    8350 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:NeoPixel_THT D1
+U 1 1 5D73ECD1
+P 7800 1850
+F 0 "D1" H 7800 2250 50  0000 L CNN
+F 1 "NeoPixel_THT" H 7600 1450 50  0000 L CNN
+F 2 "" H 7850 1550 50  0001 L TNN
+F 3 "https://www.adafruit.com/product/1938" H 7900 1475 50  0001 L TNN
+	1    7800 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 1650 8350 1550
+Wire Wire Line
+	8350 1550 7800 1550
+Wire Wire Line
+	8350 2050 8350 2150
+Wire Wire Line
+	8350 2150 7800 2150
+$Comp
+L weigu:2N7002 Q1
+U 1 1 5D73EEA9
+P 6550 2100
+F 0 "Q1" H 6741 2167 40  0000 L CNN
+F 1 "2N7002" H 6741 2091 40  0000 L CNN
+F 2 "TO92" H 6741 2024 29  0000 L CNN
+F 3 "" H 6550 2100 60  0000 C CNN
+	1    6550 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L neopixel-rescue:R-weigu R2
+U 1 1 5D73F02F
+P 6650 1600
+F 0 "R2" V 6604 1668 50  0000 L CNN
+F 1 "1k" V 6695 1668 50  0000 L CNN
+F 2 "" V 6580 1600 30  0000 C CNN
+F 3 "" H 6650 1600 30  0000 C CNN
+	1    6650 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7500 1850 7400 1850
+Text Notes 7100 2000 0    50   ~ 0
+5V Data line
+Text Notes 6300 2600 0    50   ~ 0
+Logic Level Shifter
+Wire Wire Line
+	6350 1950 6350 2150
+$Comp
+L neopixel-rescue:R-weigu R1
+U 1 1 5D73F1A0
+P 6000 2150
+F 0 "R1" V 5954 2218 50  0000 L CNN
+F 1 "1k" V 6045 2218 50  0000 L CNN
+F 2 "" V 5930 2150 30  0000 C CNN
+F 3 "" H 6000 2150 30  0000 C CNN
+	1    6000 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4700 2350 4500 2350
+Wire Wire Line
+	4500 2350 4500 2900
+Wire Wire Line
+	4500 2900 6000 2900
+Wire Wire Line
+	6000 2900 6000 2400
+Wire Wire Line
+	6650 2300 6650 2400
+Wire Wire Line
+	6650 2400 6000 2400
+Connection ~ 6000 2400
+Wire Wire Line
+	6000 2400 6000 2350
+Wire Wire Line
+	6650 1400 4700 1400
+Wire Wire Line
+	4700 1400 4700 1950
+$Comp
+L neopixel-rescue:R-weigu R3
+U 1 1 5D73F72D
+P 7200 1850
+F 0 "R3" H 7200 1645 50  0000 C CNN
+F 1 "390" H 7200 1736 50  0000 C CNN
+F 2 "" V 7130 1850 30  0000 C CNN
+F 3 "" H 7200 1850 30  0000 C CNN
+	1    7200 1850
+	-1   0    0    1   
+$EndComp
+Connection ~ 6000 1950
+Wire Wire Line
+	5800 1950 6000 1950
+Wire Wire Line
+	6000 1950 6350 1950
+Wire Wire Line
+	6650 1800 6650 1850
+Wire Wire Line
+	7000 1850 6650 1850
+Connection ~ 6650 1850
+Wire Wire Line
+	6650 1850 6650 1900
+Text Notes 7100 1300 0    50   ~ 0
+R3 only needed if not integrated in neopixel board
+$Comp
+L weigu:NeoPixel_THT D2
+U 1 1 5DFDFFB2
+P 7800 2800
+F 0 "D2" H 7800 3200 50  0000 L CNN
+F 1 "NeoPixel_THT" H 7600 2400 50  0000 L CNN
+F 2 "" H 7850 2500 50  0001 L TNN
+F 3 "https://www.adafruit.com/product/1938" H 7900 2425 50  0001 L TNN
+	1    7800 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:USB_B_mini USB1
+U 1 1 5DFE1C2F
+P 9150 1850
+F 0 "USB1" H 8939 1822 60  0000 R CNN
+F 1 "USB_B_mini" H 8939 1928 60  0000 R CNN
+F 2 "" H 9150 1850 60  0000 C CNN
+F 3 "" H 9150 1850 60  0000 C CNN
+	1    9150 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8950 2100 8800 2100
+Wire Wire Line
+	8800 2100 8800 1550
+Wire Wire Line
+	8800 1550 8350 1550
+Connection ~ 8350 1550
+Wire Wire Line
+	7800 2500 8350 2500
+Wire Wire Line
+	8800 2500 8800 2100
+Connection ~ 8800 2100
+Wire Wire Line
+	8950 1700 8850 1700
+Wire Wire Line
+	8850 1700 8850 2150
+Wire Wire Line
+	8850 3100 8350 3100
+Wire Wire Line
+	8350 2150 8850 2150
+Connection ~ 8350 2150
+Connection ~ 8850 2150
+Wire Wire Line
+	8850 2150 8850 3100
+$Comp
+L neopixel-rescue:C+-weigu C2
+U 1 1 5DFE4782
+P 8350 2800
+F 0 "C2" H 8478 2846 50  0000 L CNN
+F 1 "1000µF" H 8478 2755 50  0000 L CNN
+F 2 "" H 8350 2770 60  0000 C CNN
+F 3 "" H 8350 2770 60  0000 C CNN
+	1    8350 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 2600 8350 2500
+Connection ~ 8350 2500
+Wire Wire Line
+	8350 2500 8800 2500
+Wire Wire Line
+	8350 3000 8350 3100
+Connection ~ 8350 3100
+Wire Wire Line
+	8350 3100 7800 3100
+Wire Wire Line
+	8100 1850 8150 1850
+Wire Wire Line
+	8150 1850 8150 2350
+Wire Wire Line
+	7450 2350 7450 2800
+Wire Wire Line
+	7450 2800 7500 2800
+Wire Wire Line
+	7450 2350 8150 2350
+$Comp
+L neopixel-rescue:ESP8266_LOLIN_D1_mini-weigu W1
+U 1 1 60DFB61B
+P 5100 5100
+F 0 "W1" H 5100 5700 60  0000 C CNN
+F 1 "ESP8266_LOLIN_D1_mini" H 5150 4450 60  0000 C CNN
+F 2 "" H 5100 5100 60  0001 C CNN
+F 3 "" H 5100 5100 60  0001 C CNN
+	1    5100 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:NeoPixel_THT D1
+U 1 1 60DFB7B1
+P 7900 4650
+F 0 "D1" H 8000 4950 50  0000 L CNN
+F 1 "NeoPixel_Ring" H 7700 5250 50  0000 L CNN
+F 2 "" H 7950 4350 50  0001 L TNN
+F 3 "https://www.adafruit.com/product/1938" H 8000 4275 50  0001 L TNN
+	1    7900 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4650 7500 4650
+Text Notes 7200 4800 0    50   ~ 0
+5V Data line
+Text Notes 6200 4100 0    50   ~ 0
+Logic Level Shifter\n74HCT125\n5V pin14, GND pin7
+$Comp
+L neopixel-rescue:R-weigu R1
+U 1 1 60DFB7EB
+P 7300 4650
+F 0 "R1" H 7300 4445 50  0000 C CNN
+F 1 "390" H 7300 4536 50  0000 C CNN
+F 2 "" V 7230 4650 30  0000 C CNN
+F 3 "" H 7300 4650 30  0000 C CNN
+	1    7300 4650
+	-1   0    0    1   
+$EndComp
+Text Notes 7000 4400 0    50   ~ 0
+R1 integrated\nin neopixel ring
+$Comp
+L 74xx_IEEE:74125 U1
+U 1 1 60DEE455
+P 6500 4650
+F 0 "U1" H 6500 5116 50  0000 C CNN
+F 1 "74HCT125" H 6500 5025 50  0000 C CNN
+F 2 "" H 6500 4650 50  0001 C CNN
+F 3 "" H 6500 4650 50  0001 C CNN
+	1    6500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:+3.3V #PWR04
+U 1 1 60E17146
+P 5700 4750
+F 0 "#PWR04" H 5700 4600 50  0001 C CNN
+F 1 "+3.3V" H 5700 4931 50  0000 C CNN
+F 2 "" H 5700 4750 50  0001 C CNN
+F 3 "" H 5700 4750 50  0001 C CNN
+	1    5700 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:+5V #PWR03
+U 1 1 60E176AB
+P 4500 4750
+F 0 "#PWR03" H 4500 4600 50  0001 C CNN
+F 1 "+5V" H 4500 4931 50  0000 C CNN
+F 2 "" H 4500 4750 50  0001 C CNN
+F 3 "" H 4500 4750 50  0001 C CNN
+	1    4500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:GND #PWR01
+U 1 1 60E17E2B
+P 3900 4450
+F 0 "#PWR01" H 3750 4450 50  0001 C CNN
+F 1 "GND" H 3900 4147 50  0000 C CNN
+F 2 "" H 3900 4450 50  0001 C CNN
+F 3 "~" H 3900 4450 50  0001 C CNN
+	1    3900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4950 5950 4950
+Wire Wire Line
+	5950 4950 5950 4750
+Wire Wire Line
+	5950 4750 6000 4750
+$Comp
+L weigu:GND #PWR05
+U 1 1 60E315B1
+P 5800 4000
+F 0 "#PWR05" H 5650 4000 50  0001 C CNN
+F 1 "GND" H 5800 3697 50  0000 C CNN
+F 2 "" H 5800 4000 50  0001 C CNN
+F 3 "~" H 5800 4000 50  0001 C CNN
+	1    5800 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4000 6000 4000
+Wire Wire Line
+	6000 4000 6000 4550
+Wire Wire Line
+	5650 4750 5700 4750
+Wire Wire Line
+	4500 4750 4550 4750
+Wire Wire Line
+	7000 4650 7100 4650
+$Comp
+L weigu:SIL1x4R J1
+U 1 1 60E47DD0
+P 3800 5300
+F 0 "J1" H 3700 5650 50  0000 C CNN
+F 1 "Light Sensor" H 3600 4950 50  0000 C CNN
+F 2 "" H 3800 5300 60  0000 C CNN
+F 3 "" H 3800 5300 60  0000 C CNN
+	1    3800 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5100 4000 5100
+Wire Wire Line
+	4000 5100 4000 4850
+Wire Wire Line
+	4000 4850 4250 4850
+Connection ~ 4250 4850
+Wire Wire Line
+	4250 4850 4550 4850
+$Comp
+L weigu:+3.3V #PWR02
+U 1 1 60E4A102
+P 4150 5750
+F 0 "#PWR02" H 4150 5600 50  0001 C CNN
+F 1 "+3.3V" H 4150 5931 50  0000 C CNN
+F 2 "" H 4150 5750 50  0001 C CNN
+F 3 "" H 4150 5750 50  0001 C CNN
+	1    4150 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5550 3900 5750
+Wire Wire Line
+	3900 5750 4150 5750
+Wire Wire Line
+	3900 5400 4300 5400
+Wire Wire Line
+	4300 5400 4300 5250
+Wire Wire Line
+	4300 5250 4550 5250
+Wire Wire Line
+	3900 4450 4250 4450
+Wire Wire Line
+	4250 4450 4250 4850
+Wire Wire Line
+	3900 5250 4150 5250
+Wire Wire Line
+	4150 5250 4150 5150
+Wire Wire Line
+	4150 5150 4550 5150
+Text Notes 3400 5100 0    50   ~ 0
+GND
+Text Notes 3400 5250 0    50   ~ 0
+SDA
+Text Notes 3400 5400 0    50   ~ 0
+SCL
+Text Notes 3400 5550 0    50   ~ 0
+3V
+$Comp
+L weigu:+5V #PWR06
+U 1 1 60E5DF1E
+P 7900 4350
+F 0 "#PWR06" H 7900 4200 50  0001 C CNN
+F 1 "+5V" H 7900 4531 50  0000 C CNN
+F 2 "" H 7900 4350 50  0001 C CNN
+F 3 "" H 7900 4350 50  0001 C CNN
+	1    7900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:GND #PWR?
+U 1 1 60E72394
+P 7900 4950
+F 0 "#PWR?" H 7750 4950 50  0001 C CNN
+F 1 "GND" H 7900 4647 50  0000 C CNN
+F 2 "" H 7900 4950 50  0001 C CNN
+F 3 "~" H 7900 4950 50  0001 C CNN
+	1    7900 4950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

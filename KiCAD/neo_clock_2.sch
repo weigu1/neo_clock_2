@@ -1,0 +1,219 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L weigu:ESP8266_LOLIN_D1_mini W1
+U 1 1 60DFB61B
+P 5100 5100
+F 0 "W1" H 5100 5700 60  0000 C CNN
+F 1 "ESP8266_LOLIN_D1_mini" H 5150 4450 60  0000 C CNN
+F 2 "" H 5100 5100 60  0001 C CNN
+F 3 "" H 5100 5100 60  0001 C CNN
+	1    5100 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:NeoPixel_THT D1
+U 1 1 60DFB7B1
+P 7900 4650
+F 0 "D1" H 8000 4950 50  0000 L CNN
+F 1 "NeoPixel_Ring" H 7700 5250 50  0000 L CNN
+F 2 "" H 7950 4350 50  0001 L TNN
+F 3 "https://www.adafruit.com/product/1938" H 8000 4275 50  0001 L TNN
+	1    7900 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4650 7500 4650
+Text Notes 7200 4800 0    50   ~ 0
+5V Data line
+Text Notes 6200 4100 0    50   ~ 0
+Logic Level Shifter\n74HCT125\n5V pin14, GND pin7
+$Comp
+L weigu:R R1
+U 1 1 60DFB7EB
+P 7300 4650
+F 0 "R1" H 7300 4445 50  0000 C CNN
+F 1 "390" H 7300 4536 50  0000 C CNN
+F 2 "" V 7230 4650 30  0000 C CNN
+F 3 "" H 7300 4650 30  0000 C CNN
+	1    7300 4650
+	-1   0    0    1   
+$EndComp
+Text Notes 7000 4400 0    50   ~ 0
+R1 integrated\nin neopixel ring
+$Comp
+L 74xx_IEEE:74125 U1
+U 1 1 60DEE455
+P 6500 4650
+F 0 "U1" H 6500 5116 50  0000 C CNN
+F 1 "74HCT125" H 6500 5025 50  0000 C CNN
+F 2 "" H 6500 4650 50  0001 C CNN
+F 3 "" H 6500 4650 50  0001 C CNN
+	1    6500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:+3.3V #PWR04
+U 1 1 60E17146
+P 5700 4750
+F 0 "#PWR04" H 5700 4600 50  0001 C CNN
+F 1 "+3.3V" H 5700 4931 50  0000 C CNN
+F 2 "" H 5700 4750 50  0001 C CNN
+F 3 "" H 5700 4750 50  0001 C CNN
+	1    5700 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:+5V #PWR03
+U 1 1 60E176AB
+P 4500 4750
+F 0 "#PWR03" H 4500 4600 50  0001 C CNN
+F 1 "+5V" H 4500 4931 50  0000 C CNN
+F 2 "" H 4500 4750 50  0001 C CNN
+F 3 "" H 4500 4750 50  0001 C CNN
+	1    4500 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:GND #PWR01
+U 1 1 60E17E2B
+P 3900 4450
+F 0 "#PWR01" H 3750 4450 50  0001 C CNN
+F 1 "GND" H 3900 4147 50  0000 C CNN
+F 2 "" H 3900 4450 50  0001 C CNN
+F 3 "~" H 3900 4450 50  0001 C CNN
+	1    3900 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 4950 5950 4950
+Wire Wire Line
+	5950 4950 5950 4750
+Wire Wire Line
+	5950 4750 6000 4750
+$Comp
+L weigu:GND #PWR05
+U 1 1 60E315B1
+P 5800 4000
+F 0 "#PWR05" H 5650 4000 50  0001 C CNN
+F 1 "GND" H 5800 3697 50  0000 C CNN
+F 2 "" H 5800 4000 50  0001 C CNN
+F 3 "~" H 5800 4000 50  0001 C CNN
+	1    5800 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4000 6000 4000
+Wire Wire Line
+	6000 4000 6000 4550
+Wire Wire Line
+	5650 4750 5700 4750
+Wire Wire Line
+	4500 4750 4550 4750
+Wire Wire Line
+	7000 4650 7100 4650
+$Comp
+L weigu:SIL1x4R J1
+U 1 1 60E47DD0
+P 3800 5300
+F 0 "J1" H 3700 5650 50  0000 C CNN
+F 1 "Light Sensor" H 3600 4950 50  0000 C CNN
+F 2 "" H 3800 5300 60  0000 C CNN
+F 3 "" H 3800 5300 60  0000 C CNN
+	1    3800 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5100 4000 5100
+Wire Wire Line
+	4000 5100 4000 4850
+Wire Wire Line
+	4000 4850 4250 4850
+Connection ~ 4250 4850
+Wire Wire Line
+	4250 4850 4550 4850
+$Comp
+L weigu:+3.3V #PWR02
+U 1 1 60E4A102
+P 4150 5750
+F 0 "#PWR02" H 4150 5600 50  0001 C CNN
+F 1 "+3.3V" H 4150 5931 50  0000 C CNN
+F 2 "" H 4150 5750 50  0001 C CNN
+F 3 "" H 4150 5750 50  0001 C CNN
+	1    4150 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 5550 3900 5750
+Wire Wire Line
+	3900 5750 4150 5750
+Wire Wire Line
+	3900 5400 4300 5400
+Wire Wire Line
+	4300 5400 4300 5250
+Wire Wire Line
+	4300 5250 4550 5250
+Wire Wire Line
+	3900 4450 4250 4450
+Wire Wire Line
+	4250 4450 4250 4850
+Wire Wire Line
+	3900 5250 4150 5250
+Wire Wire Line
+	4150 5250 4150 5150
+Wire Wire Line
+	4150 5150 4550 5150
+Text Notes 3400 5100 0    50   ~ 0
+GND
+Text Notes 3400 5250 0    50   ~ 0
+SDA
+Text Notes 3400 5400 0    50   ~ 0
+SCL
+Text Notes 3400 5550 0    50   ~ 0
+3V
+$Comp
+L weigu:+5V #PWR06
+U 1 1 60E5DF1E
+P 7900 4350
+F 0 "#PWR06" H 7900 4200 50  0001 C CNN
+F 1 "+5V" H 7900 4531 50  0000 C CNN
+F 2 "" H 7900 4350 50  0001 C CNN
+F 3 "" H 7900 4350 50  0001 C CNN
+	1    7900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L weigu:GND #PWR?
+U 1 1 60E72394
+P 7900 4950
+F 0 "#PWR?" H 7750 4950 50  0001 C CNN
+F 1 "GND" H 7900 4647 50  0000 C CNN
+F 2 "" H 7900 4950 50  0001 C CNN
+F 3 "~" H 7900 4950 50  0001 C CNN
+	1    7900 4950
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4550 4950
+NoConn ~ 4550 5050
+NoConn ~ 4550 5350
+NoConn ~ 4550 5450
+NoConn ~ 5650 5450
+NoConn ~ 5650 5350
+NoConn ~ 5650 5250
+NoConn ~ 5650 5150
+NoConn ~ 5650 5050
+NoConn ~ 5650 4850
+$EndSCHEMATC
